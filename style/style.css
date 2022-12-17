@@ -5,6 +5,15 @@ body, html, p, a, button, div {
     font-family: 'EuropeExt Normal', arial;
     font-stretch: 90%;
 }
+@font-face {
+    font-family: 'EuropeExt Normal';
+    src: url('../font/europeext_normal.eot'); /* IE 9 Compatibility Mode */
+    src: url('../font/europeext_normal.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../font/europeext_normal.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../font/europeext_normal.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../font/europeext_normal.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../font/europeext_normal.svg#europeext_normal') format('svg'); /* Chrome < 4, Legacy iOS */
+}
 .text-small {
     font-size: 85%;
 }
