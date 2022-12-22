@@ -16,7 +16,7 @@ slider1 = new Swiper('.slider1', {
 	direction: 'horizontal',
 	mousewheel: true,
 	slidesPerView: 2.75,
-	slidesOffsetBefore: -90,
+	slidesOffsetBefore: 24,
 	scrollbar: {
 		el: '.swiper-scrollbar',
 	},

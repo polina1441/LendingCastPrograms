@@ -42,7 +42,7 @@ section{
     border-style: solid;
 }
 .main-button:hover{
-    box-shadow: 4px 4px 0px #73FFB0;
+    box-shadow: 4px 4px 0 #73FFB0;
     transition: 0.2s  ease-in;
 }
 .text-bg-dark {
@@ -137,10 +137,15 @@ section{
 }
 .swiper-slide{
     width: 526px;
+    color: white;
 }
 .slider__item {
     width: 526px;
-    height: 448px;
+    height: 100%;
+    border-width: 0 0 2px 0;
+    border-color: rgba(115, 255, 176, 0);
+    border-style: solid;
+    background-repeat: no-repeat;
     margin-bottom: calc(var(--index) * 2.6);
     cursor: pointer;
     transition: transform var(--transition);
@@ -148,16 +153,15 @@ section{
 }
 .slider__img {
     width: 526px;
-    height: 448px;
-    cursor: pointer;
+    height: 228px;
+    border-width: 0 0 2px 0;
+    border-color: rgba(115, 255, 176, 0);
+    border-style: solid;
 }
 /*свойство откл скрола и вкл перетаскивания*/
 .slider .slider__wrapper {
     transition: var(--transition)!important;
     will-change: transform;
-}
-.slider__item:hover {
-    transform: scale(1.04);
 }
 
 /* burger menu style */
