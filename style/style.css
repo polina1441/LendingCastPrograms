@@ -10,10 +10,14 @@ html, body {
     overflow: hidden;
     background-color: #191516;
 }
-section{
+.section-all-height{
     height: 100%;
     display: flex;
     background-color: #191516;
+}
+.container{
+    background-color: #191516;
+    color: white;
 }
 @font-face {
     font-family: 'EuropeExt Normal';
@@ -68,6 +72,28 @@ section{
     border-style: solid;
     color: white;
 }
+.arrow-box{
+    width: 65px;
+    height: 48px;
+    border-style: solid;
+    color: white;
+    background-color: #191516;
+    border-width: 2px 2px;
+    border-color: #73FFB0;
+    border-style: solid;
+}
+.arrow-box-r:hover{
+    box-shadow: 4px 4px 0 #73FFB0;
+    transition: 0.2s  ease-in;
+}
+.arrow-box-l:hover{
+    box-shadow: -4px 4px 0 #73FFB0;
+    transition: 0.2s  ease-in;
+}
+/*.arrow:hover{*/
+/*    overflow: visible;*/
+/*    display: contents;*/
+/*}*/
 
 /* xs (<=543px) */
 @media (max-width: 575px) {
