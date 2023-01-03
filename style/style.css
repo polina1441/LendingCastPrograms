@@ -5,9 +5,37 @@ body, html, p, a, button, div {
     font-family: 'EuropeExt Normal', arial;
     font-stretch: 90%;
 }
+html, body {
+    height: 100%;
+    overflow : scroll;
+    background-color: #191516;
+}
+.section-all-height{
+    height: 100%;
+    display: flex;
+    background-color: #191516;
+}
+.container{
+    background-color: #191516;
+    color: white;
+}
 @font-face {
-    font-family: 'EuropeExt Normal', arial;
-    src: url('/font/europeextnormal.ttf');
+    font-family: 'EuropeExt Normal';
+    src: url('../font/europeext_normal.eot'); /* IE 9 Compatibility Mode */
+    src: url('../font/europeext_normal.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../font/europeext_normal.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../font/europeext_normal.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../font/europeext_normal.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../font/europeext_normal.svg#europeext_normal') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+:root {
+    --index: calc(1vw + 1vh);
+    --transition: 1.25s cubic-bezier(.2, .6, 0, 1);
+}
+.display-4{
+    font-family: 'EuropeExt Bold', arial;
+    font-weight: bold;
+    width: 80%;
 }
 .text-small {
     font-size: 85%;
@@ -23,7 +51,7 @@ body, html, p, a, button, div {
     border-style: solid;
 }
 .main-button:hover{
-    box-shadow: 4px 4px 0px #73FFB0;
+    box-shadow: 4px 4px 0 #73FFB0;
     transition: 0.2s  ease-in;
 }
 .text-bg-dark {
@@ -41,7 +69,6 @@ body, html, p, a, button, div {
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     color: white;
-
 }
 .li-nav:hover{
     border-width:0 0 2px 0;
@@ -49,8 +76,38 @@ body, html, p, a, button, div {
     border-style: solid;
     color: white;
 }
+.arrow-box{
+    width: 65px;
+    height: 48px;
+    border-style: solid;
+    color: white;
+    background-color: #191516;
+    border-width: 2px 2px;
+    border-color: #73FFB0;
+    border-style: solid;
+}
+.arrow-box-r:hover{
+    box-shadow: 4px 4px 0 #73FFB0;
+    transition: 0.2s  ease-in;
+}
+.arrow-box-l:hover{
+    box-shadow: -4px 4px 0 #73FFB0;
+    transition: 0.2s  ease-in;
+}
+/*.arrow:hover{*/
+/*    overflow: visible;*/
+/*    display: contents;*/
+/*}*/
 
 /* xs (<=543px) */
+.arrow_scroll{
+    height: 50px;
+    width: 53px;
+    background-color: #191516;
+    border-width: 2px 2px;
+    border-color: white;
+    border-style: solid;
+}
 @media (max-width: 575px) {
     .hide-item{
         display: none;
@@ -79,10 +136,16 @@ body, html, p, a, button, div {
     .spacer{
         display: block;
     }
+    .scale-img{
+        background-image: url('../img/iPad_Pro_half.png');
+    }
 }
 @media (min-width: 526px) and (max-width: 576px) {
     .nav{
         width: 10%;
+    }
+    .scale-img{
+        width: 60%;
     }
 }
 /* md (>=768 и <=991) */
@@ -93,11 +156,17 @@ body, html, p, a, button, div {
     .li-nav, .main-button{
         font-size: 90%;
     }
+    .scale-img{
+        width: 90%;
+    }
 }
 /* lg (>=992 и <=1199) */
 @media (min-width: 992px) and (max-width: 1199px) {
     .hamburger-menu {
         display: none;
+    }
+    .scale-img{
+        width: 90%;
     }
 }
 
@@ -108,11 +177,49 @@ body, html, p, a, button, div {
     }
 }
 
-
+/*slider*/
+.main-wrapper {
+    height: 526px;
+    gap: var(--index);
+}
+.slider {
+    overflow: visible;
+}
+.swiper-slide{
+    width: 526px;
+    color: white;
+}
+.slider__item {
+    width: 526px;
+    height: 100%;
+    border-width: 0 0 2px 0;
+    border-color: rgba(115, 255, 176, 0);
+    border-style: solid;
+    background-repeat: no-repeat;
+    margin-bottom: calc(var(--index) * 2.6);
+    cursor: pointer;
+    transition: transform var(--transition);
+    will-change: transform;
+}
+.slider__img {
+    width: 526px;
+    height: 228px;
+    border-width: 0 0 2px 0;
+    border-color: rgba(115, 255, 176, 0);
+    border-style: solid;
+}
+/*свойство откл скрола и вкл перетаскивания*/
+.slider .slider__wrapper {
+    transition: var(--transition)!important;
+    will-change: transform;
+}
 
 /* burger menu style */
 #menu__toggle {
     opacity: 0;
+}
+.hamburger-menu{
+    z-index: 100;
 }
 #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
