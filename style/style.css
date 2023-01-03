@@ -7,7 +7,7 @@ body, html, p, a, button, div {
 }
 html, body {
     height: 100%;
-    overflow: hidden;
+    overflow : scroll;
     background-color: #191516;
 }
 .section-all-height{
@@ -31,6 +31,11 @@ html, body {
 :root {
     --index: calc(1vw + 1vh);
     --transition: 1.25s cubic-bezier(.2, .6, 0, 1);
+}
+.display-4{
+    font-family: 'EuropeExt Bold', arial;
+    font-weight: bold;
+    width: 80%;
 }
 .text-small {
     font-size: 85%;
@@ -64,7 +69,6 @@ html, body {
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
     color: white;
-
 }
 .li-nav:hover{
     border-width:0 0 2px 0;
@@ -96,6 +100,14 @@ html, body {
 /*}*/
 
 /* xs (<=543px) */
+.arrow_scroll{
+    height: 50px;
+    width: 53px;
+    background-color: #191516;
+    border-width: 2px 2px;
+    border-color: white;
+    border-style: solid;
+}
 @media (max-width: 575px) {
     .hide-item{
         display: none;
@@ -124,10 +136,16 @@ html, body {
     .spacer{
         display: block;
     }
+    .scale-img{
+        background-image: url('../img/iPad_Pro_half.png');
+    }
 }
 @media (min-width: 526px) and (max-width: 576px) {
     .nav{
         width: 10%;
+    }
+    .scale-img{
+        width: 60%;
     }
 }
 /* md (>=768 и <=991) */
@@ -138,11 +156,17 @@ html, body {
     .li-nav, .main-button{
         font-size: 90%;
     }
+    .scale-img{
+        width: 90%;
+    }
 }
 /* lg (>=992 и <=1199) */
 @media (min-width: 992px) and (max-width: 1199px) {
     .hamburger-menu {
         display: none;
+    }
+    .scale-img{
+        width: 90%;
     }
 }
 
