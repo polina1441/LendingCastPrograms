@@ -156,6 +156,13 @@ footer{
     display: table;
     clear: both;
 }
+.img-not-copy{
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 @media (max-width: 575px) {
     .hide-item{
         display: none;
