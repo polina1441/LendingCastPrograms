@@ -41,6 +41,10 @@ html, body {
 .text-small {
     font-size: 85%;
 }
+.text-usual{
+    font-family: 'Roboto', arial;
+    font-stretch: 120%;
+}
 .spacer{
     display: none;
 }
@@ -101,6 +105,24 @@ html, body {
 /*}*/
 
 /* xs (<=543px) */
+.tech {
+    width: 60%;
+}
+.tech-img img{
+    margin: 0 auto;
+    max-width: 60px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.tech-img img:hover{
+    margin: 0 auto;
+    max-width: 60px;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
 .arrow_scroll{
     height: 50px;
     width: 53px;
@@ -171,7 +193,7 @@ footer{
         overflow: hidden;
     }
     .whos-speaking-area .speakers .spk-img:hover ul {
-        left: 30%;
+        left: 25%;
         opacity: 1;
         z-index: 9;
         margin: 0 auto;
@@ -227,7 +249,7 @@ footer{
         width: 90%;
     }
     .whos-speaking-area .speakers .spk-img:hover ul {
-        left: 13%;
+        left: 15%;
         opacity: 1;
         z-index: 9;
         margin: 0 auto;
@@ -262,6 +284,14 @@ footer{
     }
 }
 /* TEAM */
+.whos-speaking-area .fa-brands {
+    color: white;
+    font-size: 32px;
+}
+.whos-speaking-area .fa-solid {
+    color: white;
+    font-size: 32px;
+}
 .whos-speaking-area .speakers {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -280,7 +310,7 @@ footer{
 }
 .whos-speaking-area .speakers .spk-img {
     position: relative;
-    max-width: 380px;
+    max-width: 300px;
     margin: 0 auto;
 }
 .whos-speaking-area .speakers .spk-img:before {
@@ -350,7 +380,7 @@ footer{
     transition: all 0.5s ease 0.2s;
     margin: 16px 20px;
 }
-.whos-speaking-area .speakers .spk-img ul li a i.fa {
+.whos-speaking-area .speakers .spk-img ul li a i.fa i.fa-brands {
     color: rgba(255, 78, 0, 0.8);
     font-size: 280%;
     -webkit-transition: all 0.4s;
@@ -362,7 +392,7 @@ footer{
     line-height: 21px;
     text-align: center;
 }
-.whos-speaking-area .speakers .spk-img ul li a i.fa:hover {
+.whos-speaking-area .speakers .spk-img ul li a i.fa i.fa-brands:hover {
     color: #653CD2;
 }
 .whos-speaking-area .speakers .spk-img ul li:nth-child(1) {
